@@ -1,14 +1,71 @@
 import classes from './header.module.css'
+import * as React from "react";
 
-const Header = () => {
+type propsType = {
+  textName: string
+  setTextName: (name: string) => void
+  isEditing: boolean
+  setIsEditing: (isEditing: boolean) => void
+}
+
+const Header = (props: propsType) => {
+  const {
+    textName,
+    setTextName,
+    isEditing,
+    setIsEditing,
+  } = props
+
+  const onNameClick = ((event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault()
+    setIsEditing(true)
+  })
+
+  const onInputChange = ((event: React.ChangeEvent<HTMLInputElement>) => {
+    setTextName(event.target.value)
+  })
+
+  const onInputBlur = () => {
+    if (textName.trim() === '') {
+      setTextName('Миша')
+    }
+    setIsEditing(false)
+  }
+
+  const onInputKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      if (textName.trim() === '') {
+        setTextName('Миша')
+      }
+      setIsEditing(false)
+    }
+    if (e.key === 'Escape') {
+      setIsEditing(false)
+    }
+  }
+
   return (
     <header className={`${classes.header} container`}>
       <div className={classes.header__inner}>
-        <a
-          className={classes.header__name}
-          href="#"
-        >Миша
-        </a>
+        {isEditing ? (
+          <input
+            id="name"
+            type="text"
+            value={textName}
+            onChange={onInputChange}
+            onBlur={onInputBlur}
+            onKeyDown={onInputKeyDown}
+            autoFocus
+          />
+        ) : (
+          <a
+            className={classes.header__name}
+            href="#"
+            onClick={onNameClick}
+          >
+            {textName}
+          </a>
+        )}
         <nav className={classes.header__navigationList}>
           <a
             className={classes.header__navigationItem}
