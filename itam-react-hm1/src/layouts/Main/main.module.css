@@ -1,0 +1,52 @@
+@import "../../styles/variables.css";
+
+.info__inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.info__additional,
+.info__myStory {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 14px;
+  border: 2px solid white;
+  padding: 30px;
+  border-radius: var(--border-radius);
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow);
+
+  &:hover {
+    transform: scale(1.01);
+    border: 2px solid purple;
+  }
+}
+
+.info__additional {
+  gap: 10px;
+}
+
+.myStory__text:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.soc1als__images {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 720px) {
+  .info__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info__additional {
+    width: 100%;
+  }
+}

@@ -1,0 +1,149 @@
+@import "../../styles/variables.css";
+
+/*
+ Пишу по БЭМ, с расчетом на то, что потом хочу переделать в scss
+ И на след уроках в js сделаю функционал для смены темы
+*/
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding-block: 25px;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.header__name {
+  font-size: 26px;
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+
+  &:hover {
+    color: purple;
+  }
+}
+
+.header__navigationList {
+  display: flex;
+  gap: 70px;
+  font-size: 24px;
+}
+
+.header__navigationItem {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+
+  &:hover {
+    color: purple;
+  }
+}
+
+
+.header__functionals {
+  padding: 5px;
+}
+
+.themeSwitcher {
+  padding: 5px;
+}
+
+.themeSwitcher__input {
+  display: none;
+}
+
+img {
+  pointer-events: none;
+}
+
+.themeSwitcher__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: var(--border-radius);
+  user-select: none;
+  box-shadow: var(--shadow);
+  border: 2px solid white;
+
+  &:hover {
+    border: 2px solid purple;
+  }
+}
+
+.themeSwitcher__imageBall {
+  position: absolute;
+  background-color: white;
+  border-radius: var(--border-radius);
+  transition: all 0.2s ease;
+  pointer-events: none;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+}
+
+.themeSwitcher__wrapper svg {
+  padding: 15px;
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+}
+
+.moon {
+  color: black;
+}
+
+.themeSwitcher__input:checked + .themeSwitcher__wrapper .themeSwitcher__imageBall {
+  transform: translateX(100%);
+  background-color: black;
+}
+
+.themeSwitcher__input:checked + .themeSwitcher__wrapper .sun {
+  color: white;
+}
+
+.themeSwitcher__input:checked + .themeSwitcher__wrapper {
+  border: 2px solid black;
+  transition-duration: 0.2s;
+  background-color: white;
+}
+
+.functionals__burgerMenu {
+  display: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  background: #1f1f27;
+  user-select: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border: 2px solid transparent;
+
+  &:hover {
+    border: 2px solid purple;
+  }
+}
+
+@media (max-width: 720px) {
+  .header__navigationList {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 610px) {
+  .header__navigationList {
+    display: none;
+  }
+
+  .themeSwitcher {
+    display: none;
+  }
+
+  .functionals__burgerMenu {
+    display: flex;
+  }
+}
