@@ -1,0 +1,56 @@
+.header {
+ margin-top: 294px;
+ text-align: center;
+}
+.textH1 {
+ font-size: 200px;
+}
+.header img{
+ margin: 0 auto;
+}
+.header p{
+ color: var(--accent-color);
+ font-family: 'MADETheArtistScript';
+ font-size: 100px;
+ line-height: 100px;
+}
+@media screen and (max-width:1400px) {
+	.textH1 {
+  font-size: 150px;
+ }
+}
+@media screen and (max-width:1068px){
+	.textH1 {
+		font-size: 100px;
+ }
+ .header p{
+  font-size: 80px;
+ }
+}
+@media screen and (max-width:820px){
+	.textH1 {
+		font-size: 80px;
+ }
+ .header p{
+  font-size: 60px;
+ }
+}
+@media screen and (max-width:590px){
+	.header{
+		margin-top: 100px;
+	}
+	.textH1 {
+		font-size: 55px;
+	}
+	.header p{
+		font-size: 45px;
+	}
+}
+@media screen and (max-width:440px){
+	.textH1 {
+		font-size: 40px;
+	}
+	.header p{
+		font-size: 30px;
+	}
+}
