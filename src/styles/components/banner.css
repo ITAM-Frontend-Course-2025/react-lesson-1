@@ -42,3 +42,11 @@
     padding: 0 30px 20px 30px;
     row-gap: 20px;
 }
+
+.column__block-error{
+    background-color: var(--border-background-error);
+    border: var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 0 30px 20px 30px;
+    row-gap: 20px;
+}

@@ -1,16 +1,22 @@
-# React + Vite
+крч вот че переработал:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. сделал нормальную точку входа для css файлов
+2. все пропсы теперь типизированы
+3. есть иконка 
 
-Currently, two official plugins are available:
+вообщем еще хотелось бы сказать пару слов по поводу логики,
+так как она можт показаться немного запутанной
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+вообщем всё введеное поступает в функцию handleInputChange (onChange={handleInputChange})/(почему я использовал e: React.ChangeEvent<HTMLInputElement>  а потому что безопасность и безошибочность) 
 
-## React Compiler
+из функции handleInputChange есть два пути 
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+    если строка не пустая (пробелы не учитываются) то мы переходим к функции checkForbiddenWords там мы проверяем на запрещенные слова
 
-## Expanding the ESLint configuration
+        если запрещенные слова есть то показываем ошибку, не показываем кнопка сохранения, и меняем класс фотки
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+        если запрещеных слов нет то не показываем ошибку не показываем кнопку но вызываем debounce ну и фотка дефолт 
+
+    если строка пустая не показываем кнопку не показываем ошибку
+
+

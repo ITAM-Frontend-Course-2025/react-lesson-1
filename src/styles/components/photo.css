@@ -1,5 +1,15 @@
-.column__photo{
+.column__photo-default{
     background-image: url('../../assets/myphoto.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 365px;
+    min-height: 365px;
+    border-radius: var(--border-radius);
+}
+
+.column__photo-angry{
+    background-image: url('../../assets/photoangry.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
