@@ -1,6 +1,7 @@
 import Header from './header/header'
 import AboutMe from './aboutMe/aboutMe'
 import Skills from './skills/skills'
+import Education from './education/education'
 import './App.css'
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <AboutMe />
       <Skills />
+      <Education />
     </div>
     
   )
