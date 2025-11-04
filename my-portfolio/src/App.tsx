@@ -2,6 +2,7 @@ import Header from './header/header'
 import AboutMe from './aboutMe/aboutMe'
 import Skills from './skills/skills'
 import Education from './education/education'
+import Footer from './footer/footer'
 import './App.css'
 
 function App() {
@@ -11,8 +12,8 @@ function App() {
       <AboutMe />
       <Skills />
       <Education />
-    </div>
-    
+      <Footer />
+    </div> 
   )
 }
 

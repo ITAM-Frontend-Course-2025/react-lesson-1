@@ -1,0 +1,45 @@
+.footer {
+ margin: 50px 0 20px;
+ padding: 0 95px;
+}
+.line {
+ height: 2px;
+ background-color: var(--text-color);
+}
+.footer__flex {
+ display: flex;
+ justify-content: space-between;
+ margin-top: 20px;
+ font-size: 25px;
+}
+.footer a{
+ color: var(--text-color);
+ font-size: 25px;
+	text-decoration: underline;
+	transition: 1s;
+}
+.footer a:hover{
+	text-decoration: none;
+	opacity: 0.7;
+}
+@media screen and (max-width:820px){
+ .footer__flex{
+  font-size: 20px;
+ }
+ .footer a{
+  font-size: 20px;
+ }
+ .footer{
+  padding: 0 20px;
+ }
+}
+@media screen and (max-width:590px){
+	.footer__flex, .footer a{
+		font-size: 14px;
+	}
+}
+@media screen and (max-width:440px){
+	.footer__flex, .footer a{
+		font-size: 10px;
+	}
+}
