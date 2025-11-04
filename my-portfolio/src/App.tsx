@@ -1,9 +1,14 @@
 import Header from './header/header'
+import AboutMe from './aboutMe/aboutMe'
 import './App.css'
 
 function App() {
   return (
-    <Header />
+    <div>
+      <Header />
+      <AboutMe />
+    </div>
+    
   )
 }
 
