@@ -3,7 +3,10 @@
 @import url('./styles/normalize.css');
 @import url('./styles/variables.css');
 
-@import url('./styles/components/banner.css');
-@import url('./styles/components/field.css');
-@import url('./styles/components/button.css');
-@import url('./styles/components/photo.css');
+@import url('./styles/components/main/banner.css');
+@import url('./styles/components/main/button.css');
+@import url('./styles/components/main/field.css');
+@import url('./styles/components/main/photo.css');
+
+@import url('./styles/components/hat/hat-row.css');
+@import url('./styles/components/hat/hat-button.css');

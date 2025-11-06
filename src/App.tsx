@@ -1,9 +1,13 @@
-import Banner from "./components/Banner"
+import Hat from "./components/hat/Hat"
+import Banner from "./components/main/Banner"
 
 function App() {
   
   return (
-    <Banner/>
+    <>
+      <Hat/>
+      <Banner/>
+    </>
   )
 }
 
