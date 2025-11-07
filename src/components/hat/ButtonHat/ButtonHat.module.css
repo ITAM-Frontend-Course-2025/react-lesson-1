@@ -1,7 +1,7 @@
 .hatButton{
     color: var(--color-text);
     border: none;
-    background-color: black;
+    background-color:transparent;
     filter:blur(1px);
     border-radius: 10px;
     font-weight: bold;
