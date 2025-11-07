@@ -1,3 +1,5 @@
+import styles from './Field.module.css'
+
 type FieldProps=React.ComponentProps<"input">& {
     label:string,
 }
@@ -7,12 +9,12 @@ function Field (props:FieldProps) {
     const {label,...rest } = props
 
     return (
-        <div className="column__field">
-        <label className="field__label" htmlFor="change-name">
+        <div className={styles.field}>
+        <label className={styles.label} htmlFor="change-name">
             {label}
         </label>
         <input
-            className="field__input"
+            className={styles.input}
             type="text"
             id="change-name"
             placeholder=" "

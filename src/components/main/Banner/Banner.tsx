@@ -1,10 +1,11 @@
 import { useState, useCallback } from "react"
-import Button from "./Button"
-import Field from "./Field"
-import Photo from "./Photo"
+import Button from "../Button/Button"
+import Field from "../Field/Field"
+import Photo from "../Photo/Photo"
 import Text from "./Text"
 import Error from "./Error"
-import { forbiddenWords } from "./util/forbiddenWords"
+import { forbiddenWords } from "../util/forbiddenWords"
+import styles from './Banner.module.css'
 
 const Banner = () => {
 
@@ -12,10 +13,10 @@ const Banner = () => {
     const [newInput, setNewInput] = useState<string>('')
     const [showButton, setShowButton]=useState<boolean>(false)
     const [showError, setShowError]=useState<boolean>(false)
-    const [phtNameClass, setPhtNameClass]=useState<string>('-default')
+    const [phtNameClass, setPhtNameClass]=useState<string>('default')
 
     function debounce(func: Function, delay: number) {
-        let timeoutId: NodeJS.Timeout
+        let timeoutId: number | undefined
         return (...args: any[]) => {
             clearTimeout(timeoutId)
             timeoutId = setTimeout(() => func.apply(null, args), delay)
@@ -35,12 +36,12 @@ const Banner = () => {
         if (hasForbiddenWord) {
             setShowError(true)
             setShowButton(false)
-            setPhtNameClass('-angry')
+            setPhtNameClass('angry')
         } else {
             setShowError(false)
             setShowButton(false)
             debouncedShowButton()
-            setPhtNameClass('-default')
+            setPhtNameClass('default')
         }
     }
 
@@ -63,18 +64,18 @@ const Banner = () => {
     }
 
     return (
-        <div className="banner">
-            <div className="banner__row">
-                <div className="row__column">
-                    <Photo changeClass={phtNameClass} />
+        <div className={styles.banner}>
+            <div className={styles.bannerRow}>
+                <div className={styles.rowColumn}>
+                    <Photo forChange={phtNameClass} />
                     <Field
                         label={label}
                         value={newInput}
                         onChange={handleInputChange}
                     />
-                    {showButton && !showError && <Button className="column__button" onClick={saveChanges} />}
+                    {showButton && !showError && <Button onClick={saveChanges} />}
                 </div>
-                <div className="row__column">
+                <div className={styles.rowColumn}>
                     {showError && <Error />}
                     {!showError && <Text />}
                 </div>

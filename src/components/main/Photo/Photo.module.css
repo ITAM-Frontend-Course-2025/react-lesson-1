@@ -1,4 +1,4 @@
-.column__photo-default{
+.photoDefault {
     background-image: url('../../../assets/myphoto.jpg');
     background-size: contain;
     background-repeat: no-repeat;
@@ -8,7 +8,7 @@
     border-radius: var(--border-radius);
 }
 
-.column__photo-angry{
+.photoAngry {
     background-image: url('../../../assets/photoangry.jpg');
     background-size: contain;
     background-repeat: no-repeat;

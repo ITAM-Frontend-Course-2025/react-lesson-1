@@ -1,0 +1,50 @@
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 35px;
+}
+
+.bannerRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    gap: 15px;
+}
+
+@media (max-width: 768px) {
+    .bannerRow {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.rowColumn {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.block {
+    background-color: transparent;
+    border: none;
+    filter: blur(1px);
+    border-radius: var(--border-radius);
+    padding: 0 15px 20px 10px;
+    row-gap: 20px;
+}
+
+.block h2 {
+    margin: 0px 0 10px 0; 
+}
+
+.blockError {
+    background-color: transparent;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0 10px 20px 10px;
+    row-gap: 20px;
+    color: var(--border-background-error);
+    font-size: 30px;
+    filter: blur(1px);
+}
