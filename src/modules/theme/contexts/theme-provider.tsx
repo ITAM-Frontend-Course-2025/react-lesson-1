@@ -18,6 +18,8 @@ export function ThemeProvider({children}:ThemeProviderProps){
         document.documentElement.setAttribute('data-theme',theme)
     },[theme])
 
+    console.log('new theme: ',theme)
+
     return (
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
             {children}

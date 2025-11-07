@@ -1,14 +1,15 @@
-import { ThemeToggle } from '../../../modules/theme/ui/theme-toggle.tsx'
-import ButtonHat from "../ButtonHat/ButtonHat.tsx"
+import { CounterToggleDown } from '../../../modules/counter/ui/counter-toggleDown.tsx'
+import { CounterToggleUp } from '../../../modules/counter/ui/counter-toggleUp.tsx'
+import { ShowResult } from '../../../modules/counter/ui/counter-showresult.tsx'
 import styles from './Hat.module.css'
 
 const Hat=()=>{
 
     return(
         <div className={styles.hatRow}>
-            <ButtonHat text="GANG!"/>
-            <ButtonHat text="blb yf [eq!"/>
-            <ThemeToggle/>
+            <CounterToggleDown/>
+            <ShowResult />
+            <CounterToggleUp/>
         </div>
     )
 }
