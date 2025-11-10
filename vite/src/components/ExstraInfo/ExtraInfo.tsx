@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from './Navigation.module.css'
+import styles from './ExtraInfo.module.css';
 
-const Navigation: React.FC = () => {
+const Exstra: React.FC = () => {
   const menuItems = [
     'Крутая',
     'Маленькая',
@@ -24,4 +24,4 @@ const Navigation: React.FC = () => {
   )
 }
 
-export default Navigation
+export default Exstra;

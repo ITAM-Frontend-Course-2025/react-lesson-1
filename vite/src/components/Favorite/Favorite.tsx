@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from './FavoriteThings.module.css'
+import styles from './Favorite.module.css'
 
-const FavoriteThings: React.FC = () => {
+const Favorite: React.FC = () => {
   const favoriteItems = [
     {
       title: "Любимые вещи:",
@@ -33,4 +33,4 @@ const FavoriteThings: React.FC = () => {
   )
 }
 
-export default FavoriteThings
+export default Favorite;
