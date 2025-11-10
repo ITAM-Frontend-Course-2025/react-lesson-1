@@ -1,0 +1,22 @@
+.header {
+  background-color: rgb(217, 96, 124);
+  height: 55px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.adsText {
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+  font-size: 0.7em;
+  margin: auto;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .adsText {
+    font-size: 0.6em;
+    padding: 0 10px;
+  }
+}
