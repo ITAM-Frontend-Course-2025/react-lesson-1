@@ -1,0 +1,157 @@
+.favoriteTitle
+{
+    color: #422f28;
+    font-family: 'Inter', sans-serif;
+    font-size: 9rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+.favoriteContainer{
+    max-width: 1400px;
+    margin: 0 auto; 
+    padding: 0 20px;
+}
+.topContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; 
+}
+.card{
+     font-family: 'Inter', sans-serif;
+     color: #422f28;
+     font-size: 1.1rem;
+     
+    width: 100%;
+    max-height: 310px;
+    padding: 25px 25px;
+
+    background: #6a6f4c; 
+    border-radius: 10px;
+
+    border-top: 4px solid #422f28 
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+.h3Card {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-bottom: 10px;
+    height: 60px; 
+}
+
+.ulCard {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.liCard {
+    padding: 12px 16px;
+    margin: 10px 0;
+    background: #f8f1da;
+    border-radius: 10px;
+    transition: all 0.3s ease; 
+    font-weight: 500;
+    color: #422f28;
+}
+
+.liCard :hover {
+    background: #f8f1da; 
+    transform: translateX(8px);
+}
+
+.favoriteImages {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1400px;
+    margin: 1rem auto;
+    padding: 0 20px;
+}
+
+.favoriteImages img {
+    width: 100%;
+    height: 310px; 
+    object-fit: cover;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.favoriteImages img:hover {
+    transform: translateY(-5px);
+}
+@media (max-width: 1024px) {
+    .favoriteTitle {
+        font-size: 7rem;
+    }
+    .topContainer {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    
+    .favoriteImages {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .favoriteImages img {
+        height: 310px; 
+    }
+}
+
+@media (max-width: 768px) {
+
+    .favoriteTitle{
+        font-size: 5rem; 
+    }
+    .h3Card{
+        height: auto; 
+        min-height: 60px;
+    }
+    .favoriteImages img {
+        height: 310px;
+    }
+}
+
+@media (max-width: 480px) {
+    .favoriteTitle{
+        font-size: 3rem; 
+        text-align: center;
+    }
+    .topContainer {
+        grid-template-columns: 1fr; 
+    }
+    
+    .favoriteImages {
+        grid-template-columns: 1fr; 
+    }
+    
+    .card {
+        padding: 20px;
+        max-height: none; 
+    }
+    
+    .h3Card{
+        font-size: 1.3rem;
+        min-height: auto;
+    }
+    .favoriteImages img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 360px) {
+    
+    .favoriteTitle{
+        font-size: 2.5rem;
+    }
+    .card {
+        padding: 15px;
+    }
+    
+    .liCard {
+        padding: 10px 12px;
+        margin: 8px 0;
+    }
+}
