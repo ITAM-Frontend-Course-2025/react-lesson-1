@@ -1,0 +1,17 @@
+.hatButton{
+    color: var(--color-text);
+    border: none;
+    background-color:transparent;
+    filter:blur(1px);
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    &:hover{
+        text-decoration:underline;
+    }
+}

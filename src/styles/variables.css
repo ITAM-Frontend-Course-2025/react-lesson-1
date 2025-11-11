@@ -1,0 +1,24 @@
+:root[data-theme="dark"]{
+    --color-black: #000000;
+    --color-text: #c9d1c8; 
+    --color-links:#8ab4f8; 
+    
+
+    --border-radius:10px;
+    --border-color: 1px solid rgba(255, 255, 255, 0.3);
+    --border-background:rgba(255, 255, 255, 0.1);
+    --border-background-error:rgba(229, 8, 8, 0.584);
+    --backdrop-filter: blur(10px);
+}
+
+:root[data-theme="light"]{
+    --color-black:#c9d1c8;
+    --color-text: #000000; 
+    --color-links:#456ba8;
+
+    --border-radius:10px;
+    --border-color: 1px solid rgba(255, 255, 255, 0.3);
+    --border-background:rgba(255, 255, 255, 0.1);
+    --border-background-error:rgba(229, 8, 8, 0.584);
+    --backdrop-filter: blur(10px);
+}
