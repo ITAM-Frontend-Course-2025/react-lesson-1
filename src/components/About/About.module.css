@@ -1,0 +1,125 @@
+.aboutContainer {
+    display: flex;
+    align-items: flex-start; 
+    gap: 4rem;
+    margin: 2rem auto; 
+    padding: 0 1.25rem;
+    max-width: 87.5rem;
+    height: auto;
+}
+
+
+.myPhoto {
+    width: 26.25rem;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.625rem;
+    flex-shrink: 0; 
+     margin-top: 2rem;
+}
+
+
+.aboutText {
+    flex: 1; 
+}
+
+.aboutTitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 9rem; 
+    color: #422f28;
+    font-weight: 600;
+
+}
+
+.introduction {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #422f28;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.shortInfo {
+    background: rgba(106, 111, 76, 0.1);
+    padding: 1.5rem;
+    border-radius: 0.625rem;
+    border-left: 4px solid #6a6f4c;
+    
+}
+
+.shortInfoItem {
+    font-size: 1.1rem;
+    color: #422f28;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+    .aboutTitle{
+        font-size: 7rem; 
+    }
+    
+    .aboutText {
+        gap: 2rem; 
+    } 
+}
+@media (max-width: 768px) {
+    .aboutTitle{
+        font-size: 5rem; 
+    }
+    
+    .aboutContainer {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+    }
+    
+    .myPhoto {
+        max-width: 350px;
+        margin-top: 1rem;
+    }
+    
+    .introduction {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .aboutTitle{
+        font-size: 3rem; 
+        text-align: center;
+    }
+    
+    .aboutText {
+        padding: 0 15px;
+        gap: 1.5rem;
+    }
+    
+    .myPhoto {
+        max-width: 280px;
+    }
+    
+    .introduction {
+        font-size: 1.1rem;
+    }
+    
+    .shortInfo {
+        padding: 1rem;
+    }
+    
+    .shortInfoItem {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .aboutTitle{
+        font-size: 2.5rem;
+    }
+    
+    .introduction {
+        font-size: 1rem;
+    }
+}
+

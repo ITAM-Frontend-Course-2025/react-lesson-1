@@ -1,0 +1,81 @@
+.header {
+    background-color: #6a6f4c; 
+    width: 100%;
+    height: clamp(60px, 8dvh, 80px);
+    padding: clamp(1rem, 3dvh, 1.5rem) clamp(1rem, 5dvw, 2rem);
+    display: flex;
+    align-items: center;
+    color: #f8f1da;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    box-sizing: border-box;
+}
+
+.headerName {
+    font-size: clamp(1.1rem, 2.5dvw, 1.8rem);
+    margin: 0;
+    font-weight: 400; 
+}
+
+.headerMenu {
+    display: flex;
+    gap: clamp(1rem, 3dvw, 2.5rem);
+    margin-left: auto;    
+    margin-right: clamp(1rem, 5dvw, 2.5rem);     
+}
+
+.menuItem {
+    font-size: clamp(1rem, 2.5dvw, 1.3rem);
+    font-weight: normal;
+    margin: 0;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: clamp(0.3rem, 1dvh, 0.5rem) clamp(0.5rem, 2dvw, 1rem);
+    border-radius: 0.5rem;
+}
+
+.menuItem:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+
+
+@media (max-width: 768px) { 
+    .header {
+        flex-direction: column;
+        height: auto;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .headerMenu {
+        margin: 0;
+        width: 100%;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .menuItem {
+        width: clamp(5rem, 25%, 7rem);
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) { 
+    .headerMenu {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .menuItem {
+        width: 100%;
+        padding: 0.8rem;
+    }
+}
+@media (max-width: 360px) {
+    .headerMenu {
+        flex-direction: column; 
+        gap: 0.5rem;
+    }
+}
